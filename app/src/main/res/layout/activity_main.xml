@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner_teste"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPontoA"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/round_button"
+        android:text="@string/btn_marcar"
+        android:textSize="36sp"
+        ads:layout_constraintBottom_toBottomOf="@+id/btnTrucoA"
+        ads:layout_constraintEnd_toStartOf="@+id/btnPontoAmenos"
+        ads:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPontoAmenos"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/round_button"
+        android:text="@string/btn_desmarcar"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        ads:layout_constraintBottom_toBottomOf="@+id/btnTrucoA"
+        ads:layout_constraintEnd_toStartOf="@+id/divider"
+        ads:layout_constraintStart_toEndOf="@+id/btnPontoA" />
+
+    <Button
+        android:id="@+id/btnTrucoA"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/rounded_button"
+        android:text="TRUCO!!!"
+        android:textSize="24sp"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toStartOf="@+id/divider"
+        ads:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPontoB"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/round_button"
+        android:text="@string/btn_marcar"
+        android:textSize="36sp"
+        ads:layout_constraintBottom_toBottomOf="@+id/btnTrucoB"
+        ads:layout_constraintEnd_toStartOf="@+id/btnPontoBmenos"
+        ads:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/btnPontoBmenos"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/round_button"
+        android:text="@string/btn_desmarcar"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        ads:layout_constraintBottom_toBottomOf="@+id/btnTrucoB"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toEndOf="@+id/btnPontoB" />
+
+    <Button
+        android:id="@+id/btnTrucoB"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/rounded_button"
+        android:text="TRUCO!!!"
+        android:textSize="24sp"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/txtViewTimeA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:maxLength="18"
+        android:onClick="onClickA"
+        android:text="Time A"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        ads:layout_constraintEnd_toStartOf="@+id/divider"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewTimeB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:maxLength="18"
+        android:onClick="onClickB"
+        android:text="Time B"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toEndOf="@+id/divider"
+        ads:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewTextPontosA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/text_pontos"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        ads:layout_constraintEnd_toStartOf="@+id/divider"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/txtViewTextPontosB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/text_pontos"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toEndOf="@+id/divider"
+        ads:layout_constraintTop_toTopOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/txtViewPontosA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        ads:layout_constraintEnd_toStartOf="@+id/divider"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/txtViewTextPontosA" />
+
+    <TextView
+        android:id="@+id/txtViewPontosB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toEndOf="@+id/divider"
+        ads:layout_constraintTop_toBottomOf="@+id/txtViewTextPontosB" />
+
+    <TextView
+        android:id="@+id/txtViewPlacarA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        ads:layout_constraintEnd_toStartOf="@+id/divider"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/txtViewPontosA" />
+
+    <TextView
+        android:id="@+id/txtViewPlacarB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toEndOf="@+id/divider"
+        ads:layout_constraintTop_toBottomOf="@+id/txtViewPontosB" />
+
+</android.support.constraint.ConstraintLayout>

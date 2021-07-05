@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Marca Tento</string>
+
+    <string name="text_pontos">Pontos:</string>
+
+    <string name="btn_marcar">+</string>
+    <string name="btn_desmarcar">-</string>
+
+    <string name="menu_zerar">Zerar</string>
+
+    <string name="admob_idapp">ca-app-pub-8851031145457703~3046887167</string>
+    <string name="admob_banner">ca-app-pub-8851031145457703/6682879840</string>
+    <string name="admob_intersticial">ca-app-pub-8851031145457703/3461696420</string>
+
+    <string name="admob_banner_teste">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_intersticial_teste">ca-app-pub-3940256099942544/1033173712</string>
+
+
+</resources>
